@@ -23,7 +23,8 @@ My learning this week:
     - cp copy file/folder
     - mkdir create new directory
     - rm remove file. 
-    - rmdir remove folder.
+    - rmdir remove empty folder. To remove non-empty folder, use rm with -r flag instead to recursively remove all the file/folder in the folder
+      you want to remove.
     - head -<line> to get the top <line> lines
     - tail -<line> to get the last <line> lines
 4. Learn redirection operation, control operator, and exit status
