@@ -53,3 +53,5 @@ My learning this week:
     - But in this context it means a configuration or environment file like .bashrc (for bash configuration), init.lua (for neovim configuration),
       or .gitignore (for listing any file / folder name that you do not want it be commit to git)
     - I have learned that there are tools to help you manage these dotfiles.
+8. Learn how to setup github
+    - Learn how to login using SSH
