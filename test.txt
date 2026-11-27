@@ -1,0 +1,42 @@
+/etc/profile.d/Z97-byobu.sh:21:#  b) LC_* is sent and receieved by most /etc/ssh/ssh*_config
+/etc/group-:52:_ssh:x:102:
+/etc/apparmor.d/ssh-keyscan:14:profile ssh-keyscan /usr/bin/ssh-keyscan {
+/etc/apparmor.d/ssh-keyscan:25:  file mr /usr/bin/ssh-keyscan,
+/etc/apparmor.d/ssh-keyscan:28:  include if exists <local/ssh-keyscan>
+/etc/apparmor.d/abstractions/private-files-strict:12:  audit deny @{HOME}/.ssh/{,**} mrwkl,
+/etc/apparmor.d/abstractions/ubuntu-browsers.d/user-files:13:  audit deny @{HOME}/.ssh/{,**} mrwkl,
+/etc/apparmor.d/abstractions/consoles:21:  # -all- xterm, sshd, etc, terminals on the system.
+/etc/mime.types:533:application/urc-ressheet+xml			rsheet
+/etc/X11/Xsession.options:8:use-ssh-agent
+/etc/X11/Xsession.d/90x11-common_ssh-agent:1:# $Id: 90x11-common_ssh-agent 305 2005-07-03 18:51:43Z dnusinow $
+/etc/X11/Xsession.d/90x11-common_ssh-agent:6:SSHAGENT=/usr/bin/ssh-agent
+/etc/X11/Xsession.d/90x11-common_ssh-agent:9:if has_option use-ssh-agent; then
+/etc/X11/Xsession.d/90gpg-agent:12:# Nonetheless, ssh and older versions of gpg require environment
+/etc/X11/Xsession.d/90gpg-agent:21:      awk -F: '/^enable-ssh-support:/{ print $10 }')" ]; then
+/etc/X11/Xsession.d/90gpg-agent:22:    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+/etc/skel/.profile:8:# for ssh logins, install and configure the libpam-umask package.
+/etc/screenrc:91:# Enable non-blocking mode to better cope with flaky ssh connections.
+/etc/screenrc:100:#   The following will open top in the first window, an ssh session to monkey
+/etc/screenrc:105:# screen -t monkey ssh monkey
+/etc/cloud/cloud.cfg:10:# If this is set, 'root' will not be able to ssh in and they
+/etc/cloud/cloud.cfg:41:  - ssh
+/etc/cloud/cloud.cfg:49:  - ssh_import_id
+/etc/cloud/cloud.cfg:81:  - ssh_authkey_fingerprints
+/etc/cloud/cloud.cfg:136:  ssh_svcname: ssh
+/etc/group:52:_ssh:x:102:
+/etc/services:24:ssh		22/tcp				# SSH Remote Login Protocol
+/etc/ssl/certs/ca-certificates.crt:1419:JfTzPV4e0hz5sy229zdcxsshTrD3mUcYhcErulWuBurQB7Lcq9CClnXO0lD+mefP
+/etc/ssh/ssh_config:2:# This is the ssh client system-wide configuration file.  See
+/etc/ssh/ssh_config:3:# ssh_config(5) for more information.  This file provides defaults for
+/etc/ssh/ssh_config:17:# ssh_config(5) man page.
+/etc/ssh/ssh_config:19:Include /etc/ssh/ssh_config.d/*.conf
+/etc/ssh/ssh_config:36:#   IdentityFile ~/.ssh/id_rsa
+/etc/ssh/ssh_config:37:#   IdentityFile ~/.ssh/id_ecdsa
+/etc/ssh/ssh_config:38:#   IdentityFile ~/.ssh/id_ed25519
+/etc/ssh/ssh_config:41:#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+/etc/ssh/ssh_config:47:#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+/etc/ssh/ssh_config:49:#   UserKnownHostsFile ~/.ssh/known_hosts.d/%k
+/etc/logcheck/ignore.d.server/gpg-agent:5:^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Listening on GnuPG cryptographic agent \(ssh-agent emulation\)\.$
+/etc/logcheck/ignore.d.server/gpg-agent:9:^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent \(ssh-agent emulation\)\.$
+/etc/sudo.conf:27:#Path askpass /usr/bin/ssh-askpass
+/etc/sudo.conf:30:#Path askpass /usr/libexec/openssh/gnome-ssh-askpass
