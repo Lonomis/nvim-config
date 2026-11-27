@@ -1,0 +1,5 @@
+I am still confusing about
+- sed and awk
+
+I understand that sed is for edit a string and awk is for pattern scanning.
+Is this understanding correct? And I want to know what is the use case between this two?
